@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLX - 网页开发</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Bootstrap 不够用的地方，才手写 CSS */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-badge {
+      background: #0f3460;
+      color: #e94560;
+      border: 1px solid #e94560;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: inline-block;
+      margin: 4px;
+    }
+
+    .portfolio-card {
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #e94560;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-dark fixed-top" style="background:rgba(0,0,0,0.8)">
+    <div class="container">
+      <span class="navbar-brand fw-bold">DLX.dev</span>
+      <div>
+        <a href="#about" class="text-white me-3 text-decoration-none">关于我</a>
+        <a href="#works" class="text-white me-3 text-decoration-none">作品</a>
+        <a href="#contact" class="text-white text-decoration-none">联系我</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero 区域 -->
+  <div class="hero text-white" id="about">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <p class="text-danger fw-bold mb-2">👋 你好，我是</p>
+          <h1 class="display-3 fw-bold mb-3">HQM</h1>
+          <h2 class="h4 text-secondary mb-4">网页开发者 · 在读大学生</h2>
+          <p class="lead mb-4" style="color:#aaa">
+            专注于制作简洁、美观、实用的网页。<br>
+            帮助小店铺、个人品牌快速建立线上形象。
+          </p>
+          <div class="mb-4">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">微信小程序</span>
+          </div>
+          <a href="#contact" class="btn btn-danger btn-lg me-3">立即联系我</a>
+          <a href="#works" class="btn btn-outline-light btn-lg">查看作品</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 数据展示 -->
+  <div class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-4">
+          <h3 class="text-danger fw-bold">3+</h3>
+          <p class="mb-0 text-secondary">完成项目</p>
+        </div>
+        <div class="col-4">
+          <h3 class="text-danger fw-bold">¥300起</h3>
+          <p class="mb-0 text-secondary">项目报价</p>
+        </div>
+        <div class="col-4">
+          <h3 class="text-danger fw-bold">3天</h3>
+          <p class="mb-0 text-secondary">平均交付</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 作品集 -->
+  <div class="container my-5" id="works">
+    <h2 class="section-title mb-5">我的作品</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card portfolio-card shadow border-0 h-100">
+          <div class="card-body p-4">
+            <div style="font-size:40px" class="mb-3">🍖</div>
+            <span class="badge bg-danger mb-2">餐饮</span>
+            <h5 class="card-title">餐厅展示页</h5>
+            <p class="card-text text-muted">包含导航、Banner、菜单、联系方式，支持手机访问</p>
+            <a href="https://haqiman228.github.io/my-restaurant/restaurant.html"
+               target="_blank" class="btn btn-sm btn-outline-danger">查看案例 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card portfolio-card shadow border-0 h-100">
+          <div class="card-body p-4">
+            <div style="font-size:40px" class="mb-3">🧋</div>
+            <span class="badge bg-warning text-dark mb-2">饮品</span>
+            <h5 class="card-title">奶茶店主页</h5>
+            <p class="card-text text-muted">清新风格设计，含菜单展示和门店信息区块</p>
+            <button class="btn btn-sm btn-outline-warning">即将上线</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card portfolio-card shadow border-0 h-100">
+          <div class="card-body p-4">
+            <div style="font-size:40px" class="mb-3">💼</div>
+            <span class="badge bg-primary mb-2">商务</span>
+            <h5 class="card-title">企业官网</h5>
+            <p class="card-text text-muted">专业大气的企业展示页，含产品介绍和联系表单</p>
+            <button class="btn btn-sm btn-outline-primary">接单中</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 服务与报价 -->
+  <div class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="section-title mb-5" style="color:white">服务报价</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card bg-secondary border-0 text-white h-100">
+            <div class="card-body p-4 text-center">
+              <h5 class="mb-3">基础展示页</h5>
+              <h2 class="text-danger">¥300</h2>
+              <hr style="border-color:#666">
+              <p class="text-secondary">3-5个页面</p>
+              <p class="text-secondary">纯静态展示</p>
+              <p class="text-secondary">手机端适配</p>
+              <p class="text-secondary">3天内交付</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-danger text-white h-100" style="background:#1a1a2e">
+            <div class="card-body p-4 text-center">
+              <span class="badge bg-danger mb-2">最受欢迎</span>
+              <h5 class="mb-3">完整官网</h5>
+              <h2 class="text-danger">¥800</h2>
+              <hr style="border-color:#666">
+              <p class="text-secondary">5-8个页面</p>
+              <p class="text-secondary">含联系表单</p>
+              <p class="text-secondary">手机端适配</p>
+              <p class="text-secondary">5天内交付</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-secondary border-0 text-white h-100">
+            <div class="card-body p-4 text-center">
+              <h5 class="mb-3">微信小程序</h5>
+              <h2 class="text-danger">¥1500</h2>
+              <hr style="border-color:#666">
+              <p class="text-secondary">展示类小程序</p>
+              <p class="text-secondary">含菜单/产品页</p>
+              <p class="text-secondary">微信审核上线</p>
+              <p class="text-secondary">7天内交付</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 联系我 -->
+  <div class="container my-5" id="contact">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h2 class="section-title mb-4">联系我</h2>
+        <p class="text-muted mb-4">有项目想合作？直接联系我，免费沟通需求</p>
+        <div class="card shadow border-0 p-4">
+          <p class="mb-2">📱 微信：xxxx</p>
+          <p class="mb-2">📧 邮箱：xxxxx</p>
+          <p class="mb-4">⏰ 响应时间：24小时内回复</p>
+          <button class="btn btn-danger btn-lg">
+            复制微信号
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0 text-secondary">© 2026 DLX · 用心做每一个项目</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 复制微信号功能
+    document.querySelector('.btn-danger').addEventListener('click', function() {
+      navigator.clipboard.writeText('你的微信号')
+      this.textContent = '✅ 已复制！'
+      setTimeout(() => this.textContent = '复制微信号', 2000)
+    })
+  </script>
+
+</body>
+</html>
